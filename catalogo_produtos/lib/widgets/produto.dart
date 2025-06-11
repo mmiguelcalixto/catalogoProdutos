@@ -4,7 +4,7 @@ abstract class ProdutoWidget extends StatelessWidget {
   final String nome;
   final double preco;
   final String descricao;
-  final String imagemUrl;
+  final Image imagemUrl;
   final VoidCallback onTap;
   
   const ProdutoWidget({
