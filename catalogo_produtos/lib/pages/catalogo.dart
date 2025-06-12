@@ -1,4 +1,3 @@
-import 'package:catalogo_produtos/widgets/produto.dart';
 import 'package:catalogo_produtos/widgets/roupa.dart';
 import 'package:flutter/material.dart';
 
@@ -18,10 +17,15 @@ class _CatalogoState extends State<Catalogo> {
         backgroundColor: Colors.deepPurple,
         centerTitle: true,
       ),
-      body: Column(
-        children: [
-          RoupaWidget(nome: "Camiseta", descricao: "Camiseta básica", imagemUrl: Image.asset("images/tshirt.jpg", width: 200), preco: 40.00, marca: "Levis", tamanho: "M", onTap: () { },)
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: ListView(
+          children: [
+            RoupaWidget(nome: "Camiseta", descricao: "Camiseta básica", imagemUrl: Image.asset("images/tshirt.jpg", width: 200), preco: 40.00, marca: "Levis", tamanho: "M", onTap: (){}),
+            
+            RoupaWidget(nome: "Camiseta2", descricao: "Camiseta básica", imagemUrl: Image.asset("images/tshirt.jpg", width: 200), preco: 40.00, marca: "Levis", tamanho: "M", onTap: (){}),
+          ],
+        ),
       )
     );
   }
