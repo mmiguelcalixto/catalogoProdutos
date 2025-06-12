@@ -1,7 +1,6 @@
 import 'package:catalogo_produtos/widgets/produto.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class RoupaWidget extends ProdutoWidget {
   final String marca;
@@ -30,18 +29,23 @@ class RoupaWidget extends ProdutoWidget {
         margin: EdgeInsets.symmetric(),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          color: const Color.fromARGB(255, 195, 195, 192),
+          color: const Color.fromARGB(255, 200, 200, 200),
         ),
         child: Row(
           children: [
             imagemUrl,
             Column(
               children: [
-                Text(nome),
-                Text(preco.toString()),
+                Text(nome, style: TextStyle(fontSize: 30),),
+                Text("R\$${preco.toStringAsFixed(2)}", style: TextStyle(fontSize: 25),),
                 Text(descricao),
-                Text(marca),
-                Text(tamanho)
+                Row(
+                  children: [
+                    Text("Marca: $marca"),
+                    SizedBox(width: 20),
+                    Text("Tamanho: $tamanho")
+                  ],
+                ),
               ],
             )
           ],
