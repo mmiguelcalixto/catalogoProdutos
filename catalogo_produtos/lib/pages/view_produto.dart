@@ -27,6 +27,7 @@ class ViewProduto extends StatelessWidget {
     this.tipoAlimento,
   });
 
+  // método que exibe na tela apenas as propriedades passadas na classe
   showProdutoInfo() {
     if (marca != null && tamanho != null) {
       return Text("Marca: $marca \n Tamanho: $tamanho");

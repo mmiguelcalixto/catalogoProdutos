@@ -5,7 +5,6 @@ class RoupaWidget extends ProdutoWidget {
   final String marca;
   final String tamanho;
   
-  
   const RoupaWidget({
     required super.nome, 
     required super.preco, 

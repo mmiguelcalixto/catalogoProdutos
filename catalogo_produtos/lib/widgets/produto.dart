@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//classe base com propriedades comuns a todos os tipos de produto
 abstract class ProdutoWidget extends StatelessWidget {
   final String nome;
   final double preco;
